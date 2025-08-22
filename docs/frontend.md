@@ -83,7 +83,7 @@ It is built with Nuxt.js 3 (SSR) and integrates with the backend API through a s
 ## Related Links
 
 - [PullLog Backend Documentation](./backend.md)
-- [PullLog API Specification](../docs/api_overview.md)
+- [PullLog API Specification](./api_overview.md)
 - [Terms of Service](../public/docs/terms_en.md)  
 - [Privacy Policy](../public/docs/privacy_policy_en.md)
 

@@ -368,7 +368,7 @@ Discussion of designs and specifications is encouraged in Issues/Discussions.
 ## Related Links
 
 - [PullLog Frontend Documentation](./frontend.md)
-- [PullLog API Specification](../docs/api_overview.md)
+- [PullLog API Specification](./api_overview.md)
 - [Terms of Service](../public/docs/terms_en.md)  
 - [Privacy Policy](../public/docs/privacy_policy_en.md)
 

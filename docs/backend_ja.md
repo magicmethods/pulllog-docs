@@ -336,8 +336,8 @@ erDiagram
 ## 関連リンク
 
 - [PullLogフロントエンド概要](./frontend_ja.md)
-- [PullLog API仕様](../docs/api_overview.md)
-- [利用規約](../public/docs/terms_ja.md)  
-- [プライバシー・ポリシー](../public/docs/privacy_policy_ja.md)
+- [PullLog API仕様](./api_overview.md)
+- [利用規約](../public/terms.md)  
+- [プライバシー・ポリシー](../public/privacy.md)
 
 ---
