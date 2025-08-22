@@ -2,16 +2,24 @@ name: "Feature request"
 description: "Suggest an enhancement for PullLog"
 labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Security-related issues must NOT be reported here.**  
+        Please send them privately to 📧 support@pulllog.net (prefix subject with [SECURITY]).
+
   - type: textarea
     id: problem
     attributes:
       label: Problem to solve
       placeholder: What user problem does this feature solve?
+
   - type: textarea
     id: proposal
     attributes:
       label: Proposal
       placeholder: What do you suggest? Any alternative approaches?
+
   - type: textarea
     id: impact
     attributes:
