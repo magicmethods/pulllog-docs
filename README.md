@@ -23,8 +23,8 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 > **Note:** Credentials, internal endpoints, and secrets are **never** published.
 
 ## Feedback
-- 🐞 Bug reports: GitHub [Issues](issues)
-- 💡 Feature requests: GitHub [Issues](issues) / [Discussions](discussions)
+- 🐞 Bug reports: GitHub [Issues](/magicmethods/pulllog-docs/issues)
+- 💡 Feature requests: GitHub [Issues](/magicmethods/pulllog-docs/issues) / [Discussions](/magicmethods/pulllog-docs/discussions)
 - 🔐 Security reports: see [`SECURITY.md`](SECURITY.md)
 
 ## License
