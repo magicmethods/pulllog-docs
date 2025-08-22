@@ -5,8 +5,8 @@ Sessions are **not** cookie-based across origins; requests are authenticated via
 
 ```mermaid
 flowchart LR
-  U[User Browser] --> N[Nuxt 3 SSR (Cloudflare Workers)]
-  N -- fetch with secret headers --> A[Laravel API (VPS)]
+  U[User Browser] --> N["Nuxt 3 SSR (Cloudflare Workers)"]
+  N -- fetch with secret headers --> A["Laravel API (VPS)"]
   A -->|JSON| N --> U
   A --- P[(PostgreSQL 14)]
 ```
@@ -15,5 +15,6 @@ flowchart LR
 - **SSR API Proxy:** Hide secrets and add auth headers server-side.
 - **CORS-friendly:** No cross-site cookies; stateless API tokens instead.
 - **Cloudflare Workers:** Cost-effective SSR & edge caching.
+
 
 
