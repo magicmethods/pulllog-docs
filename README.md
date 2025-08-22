@@ -28,4 +28,6 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 - 🔐 Security reports: see [`SECURITY.md`](SECURITY.md)
 
 ## License
-Documentation is published under **CC BY-NC 4.0** unless noted otherwise.
+Documentation is published under [**Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**](https://creativecommons.org/licenses/by-nc/4.0/) unless noted otherwise.
+
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)

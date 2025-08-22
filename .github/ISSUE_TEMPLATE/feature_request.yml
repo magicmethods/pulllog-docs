@@ -1,0 +1,19 @@
+name: "Feature request"
+description: "Suggest an enhancement for PullLog"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      placeholder: What user problem does this feature solve?
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      placeholder: What do you suggest? Any alternative approaches?
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      placeholder: Who benefits? How often? Any risks?
