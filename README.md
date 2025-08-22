@@ -12,11 +12,11 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 
 ## Documentation Map
 - Architecture: [`docs/architecture.md`](docs/architecture.md)
-- Frontend: [`docs/frontend.md`](docs/frontend.md)
-- Backend: [`docs/backend.md`](docs/backend.md)
-- API Overview: [`docs/api/overview.md`](docs/api/overview.md)
+- Frontend: [`docs/frontend.md`](docs/frontend.md) / [Japanese ver.](docs/frontend_ja.md)
+- Backend: [`docs/backend.md`](docs/backend.md) / [Japanese ver.](docs/backend_ja.md)
+- API Overview: [`docs/api_overview.md`](docs/api/overview.md)
 - Operations (public info only): [`docs/ops.md`](docs/ops.md)
-- Security & Privacy (public overview): [`docs/security.md`](docs/security.md), [`docs/privacy.md`](docs/privacy.md)
+- Terms & Privacy (public ver.): [`public/terms.md`](public/terms.md), [`public/privacy.md`](public/privacy.md)
 - Roadmap: [`ROADMAP.md`](ROADMAP.md)
 - Changelog (docs-only): [`CHANGELOG.md`](CHANGELOG.md)
 

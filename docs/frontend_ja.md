@@ -80,7 +80,7 @@ Nuxt.js 3 をベースに SSR (Server-Side Rendering) + API プロキシ構成�
 ## 関連リンク
 
 - [PullLogバックエンド概要](./backend_ja.md)
-- [PullLog API仕様](../docs/api/overview.md)
+- [PullLog API仕様](../docs/api_overview.md)
 - [利用規約](../public/docs/terms_ja.md)  
 - [プライバシー・ポリシー](../public/docs/privacy_policy_ja.md)
 
