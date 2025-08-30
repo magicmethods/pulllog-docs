@@ -10,6 +10,10 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 - Backend: Laravel 12 + PostgreSQL 14
 - Infra: Cloudflare Workers + VPS
 
+| ![Demo Video](./public/video/demo-v1.gif "Demo Video") |
+|:---:|
+| Demo Video |
+
 | ![Application Management](./public/images/gallery-image1.webp "Apps") | ![History Management](./public/images/gallery-image2.webp "History") | ![Stats Viewer](./public/images/gallery-image3.webp "Stats") |
 |:---:|:---:|:---:|
 | Application Management | History Management  | Stats Viewer |
