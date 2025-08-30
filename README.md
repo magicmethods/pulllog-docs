@@ -1,4 +1,4 @@
-# PullLog Documentation (Public)
+# <img src="./public/images/pulllog-icon.svg" height="28" width="auto"> PullLog Documentation (Public)
 
 > This repository hosts **public technical documentation** for PullLog.  
 > **Source code is private**. Issues & discussions are welcome here.
@@ -9,6 +9,10 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 - Frontend: Nuxt 3 (SSR) with an API proxy layer
 - Backend: Laravel 12 + PostgreSQL 14
 - Infra: Cloudflare Workers + VPS
+
+| ![Application Management](./public/images/gallery-image1.webp "Apps") | ![History Management](./public/images/gallery-image2.webp "History") | ![Stats Viewer](./public/images/gallery-image3.webp "Stats") |
+|:---:|:---:|:---:|
+| Application Management | History Management  | Stats Viewer |
 
 ## Documentation Map
 - Architecture: [`docs/architecture.md`](docs/architecture.md)
