@@ -80,6 +80,29 @@ It is built with Nuxt.js 3 (SSR) and integrates with the backend API through a s
 
 ---
 
+## Public E2E Testing Overview
+
+The frontend repository also maintains a **manifest-driven Playwright E2E architecture** for critical user flows.
+
+### Public characteristics
+- Standard default device matrix:
+  - `chromium` (PC)
+  - `ipad-pro-11` (tablet)
+  - `iphone-14` (smartphone)
+- Case definitions are managed as JSON manifests.
+- Every E2E execution produces a Markdown report.
+- Successful runs may also be archived as PDF evidence.
+- Reporting uses shared templates, including a PullLog-specific template set for branded Japanese output.
+
+### Reporting model
+- One case id maps to one logical scenario.
+- When multiple projects/devices run for the same case, the generated case report aggregates **all executed project results** into a single report.
+- PDF evidence can include a fixed PC / Tablet / Smartphone comparison table while preserving per-project detail sections.
+
+> This public documentation describes the architecture at a high level and intentionally omits credentials, private endpoints, and internal-only operational details.
+
+---
+
 ## Related Links
 
 - [PullLog Backend Documentation](./backend.md)

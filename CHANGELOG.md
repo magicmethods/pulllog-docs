@@ -13,9 +13,10 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) an
 - Security policy (`SECURITY.md`)
 - Public roadmap (`ROADMAP.md`)
 - Issue templates for bug reports & feature requests (with security disclaimer)
+- Public-facing E2E architecture notes covering the manifest-driven Playwright approach, the standard PC / tablet / smartphone device matrix, and the aggregated Markdown / PDF reporting model
 
 ### Changed
-- N/A
+- Updated public frontend and architecture documentation to describe template-based E2E reporting and PullLog-branded evidence output at a high level
 
 ### Fixed
 - N/A
