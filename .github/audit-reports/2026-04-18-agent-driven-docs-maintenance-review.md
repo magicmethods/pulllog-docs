@@ -9,9 +9,9 @@ scope: standardize audit evidence metadata, normalize this evidence record, add 
 exclusions: frontend, backend, contract, direct content updates to CHANGELOG.md or ROADMAP.md, and unrelated public-documentation changes
 source-records: []
 target-files:
-	- .github/agents/docs-maintenance-orchestrator.agent.md
-	- .github/agents/docs-changelog-planner.agent.md
-	- .github/agents/docs-roadmap-planner.agent.md
+	- .github/agents/docs-orch-maintenance.agent.md
+	- .github/agents/docs-plan-changelog.agent.md
+	- .github/agents/docs-plan-roadmap.agent.md
 	- docs/document-governance.md
 	- docs/document-governance-ja.md
 	- .github/audit-reports/README.md
@@ -36,9 +36,9 @@ target-files:
 - Standardize required audit-evidence metadata for records stored under `.github/audit-reports/`.
 
 ## Changed files
-- `.github/agents/docs-maintenance-orchestrator.agent.md`
-- `.github/agents/docs-changelog-planner.agent.md`
-- `.github/agents/docs-roadmap-planner.agent.md`
+- `.github/agents/docs-orch-maintenance.agent.md`
+- `.github/agents/docs-plan-changelog.agent.md`
+- `.github/agents/docs-plan-roadmap.agent.md`
 - `docs/document-governance.md`
 - `docs/document-governance-ja.md`
 - `.github/audit-reports/README.md`

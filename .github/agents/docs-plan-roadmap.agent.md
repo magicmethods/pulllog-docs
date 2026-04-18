@@ -1,8 +1,7 @@
 ---
 description: Prepare confirmed ROADMAP maintenance instructions without editing files
-name: docs-roadmap-planner
+name: docs-plan-roadmap
 tools: [read, search]
-user-invocable: true
 agents: []
 argument-hint: "Approved scope, e.g. 'prepare roadmap updates from confirmed docs governance decisions'"
 ---

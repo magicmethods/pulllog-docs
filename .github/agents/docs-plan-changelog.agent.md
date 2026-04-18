@@ -1,8 +1,7 @@
 ---
 description: Prepare evidence-backed CHANGELOG maintenance instructions without editing files
-name: docs-changelog-planner
+name: docs-plan-changelog
 tools: [read, search]
-user-invocable: true
 agents: []
 argument-hint: "Approved record scope, e.g. 'prepare changelog entries from April docs maintenance evidence'"
 ---

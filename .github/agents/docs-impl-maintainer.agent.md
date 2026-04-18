@@ -1,8 +1,7 @@
 ---
 description: Apply approved documentation maintenance changes, archive audit evidence, and maintain project records such as CHANGELOG and ROADMAP
-name: docs-maintainer
+name: docs-impl-maintainer
 tools: [read, search, edit, execute]
-user-invocable: true
 agents: []
 argument-hint: "Approved scope or plan, e.g. 'apply README and governance fixes only'"
 ---

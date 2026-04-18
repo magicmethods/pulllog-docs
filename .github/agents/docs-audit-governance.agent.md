@@ -1,8 +1,7 @@
 ---
 description: Audit PullLog documentation governance across README, AGENTS, and docs files in all subprojects
-name: docs-governance-auditor
+name: docs-audit-governance
 tools: [read, search]
-user-invocable: true
 agents: []
 ---
 You are the PullLog documentation governance auditor.

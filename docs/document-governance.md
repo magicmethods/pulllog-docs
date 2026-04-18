@@ -14,71 +14,73 @@ This does not make `pulllog-docs/` the source of truth for every technical detai
 - `frontend/`, `backend/`, and `contract/` own their implementation details, build instructions, and technical source-of-truth documents.
 - Cross-subproject fixes should prefer small, reviewable changes and explicit source-of-truth references.
 
+Use `.github/agent-catalog.md` as the quick index for entrypoints, naming rules, and subproject-by-subproject agent ownership.
+
 ## Agent roster
 
-### `docs-maintenance-orchestrator`
+### `docs-orch-maintenance`
 - Entry point for PullLog-wide documentation audit and maintenance planning.
 - Delegates specialist reviews and consolidates findings into an approval-ready plan.
 - Stops at planning unless the user explicitly asks for edits.
-- Does not edit files directly; approved changes are delegated to `docs-maintainer`.
+- Does not edit files directly; approved changes are delegated to `docs-impl-maintainer`.
 
-### `docs-governance-auditor`
+### `docs-audit-governance`
 - Reviews terminology consistency, canonical-reference usage, README and AGENTS drift, and documentation-map freshness.
 - Reviews documentation filename consistency, including snake_case versus kebab-case drift when naming should be unified.
 - Covers `frontend/`, `backend/`, `contract/`, and `pulllog-docs/`.
 
-### `public-docs-sanitizer`
+### `docs-audit-public`
 - Reviews `pulllog-docs/` for publication-risk content, private implementation leakage, and public navigation issues.
 
-### `docs-maintainer`
+### `docs-impl-maintainer`
 - Applies approved documentation fixes with minimal diffs after orchestrator approval.
 - Archives audit evidence under `.github/audit-reports/` so the review trail remains inspectable.
 - Maintains `CHANGELOG.md` and `ROADMAP.md` when project-record upkeep is explicitly requested and the source information is confirmed.
 
-### `docs-changelog-planner`
+### `docs-plan-changelog`
 - Prepares evidence-backed `CHANGELOG.md` maintenance instructions.
 - Uses read and search only.
-- Does not edit files; `docs-maintainer` remains the only editing agent for project-record updates.
+- Does not edit files; `docs-impl-maintainer` remains the only editing agent for project-record updates.
 
-### `docs-roadmap-planner`
+### `docs-plan-roadmap`
 - Prepares confirmed `ROADMAP.md` maintenance instructions.
 - Uses read and search only.
-- Does not edit files; `docs-maintainer` remains the only editing agent for project-record updates.
+- Does not edit files; `docs-impl-maintainer` remains the only editing agent for project-record updates.
 
 ## Operating workflow
 
-1. Start with `docs-maintenance-orchestrator` when the request spans more than one subproject or needs a maintenance plan.
-2. Use `docs-governance-auditor` for terminology, README, AGENTS, index, and canonical-reference checks.
-3. Use `public-docs-sanitizer` when the scope includes `pulllog-docs/` public content.
+1. Start with `docs-orch-maintenance` or the `Start Docs Maintenance Workflow` prompt when the request spans more than one subproject or needs a maintenance plan.
+2. Use `docs-audit-governance` for terminology, README, AGENTS, index, and canonical-reference checks.
+3. Use `docs-audit-public` when the scope includes `pulllog-docs/` public content.
 4. Classify outcomes into:
    - safe maintenance candidates
    - human review required
    - out-of-scope items owned by another subproject
 5. Store audit evidence in `.github/audit-reports/` when the result needs to remain reviewable, and use the standardized YAML front matter metadata defined in `.github/audit-reports/README.md`.
    The minimum front matter should include a stable `record-id`, controlled `status`, and YAML lists for `source-records` and `target-files`.
-6. Only apply edits after explicit user approval or an explicit edit request, and route execution through `docs-maintainer`.
+6. Only apply edits after explicit user approval or an explicit edit request, and route execution through `docs-impl-maintainer`.
 
 ## Maintenance modes
 
 ### Audit remediation mode
-- Start with `docs-maintenance-orchestrator`.
+- Start with `docs-orch-maintenance`.
 - Use specialist auditors to gather findings.
 - Archive the approved finding set as evidence.
-- Delegate the approved edits to `docs-maintainer`.
+- Delegate the approved edits to `docs-impl-maintainer`.
 
 ### Project records maintenance mode
 - Use this when the goal is to maintain shared project records such as `CHANGELOG.md` and `ROADMAP.md`, even if no audit is running.
-- Start with `docs-maintenance-orchestrator` when prioritization or scope review is needed.
-- Use `docs-changelog-planner` to prepare evidence-backed `CHANGELOG.md` instructions.
-- Use `docs-roadmap-planner` to prepare confirmed `ROADMAP.md` instructions.
-- Use `docs-maintainer` directly only when the update source is already approved and the file targets are clear.
-- Keep `docs-maintainer` as the only agent that applies project-record edits.
+- Start with `docs-orch-maintenance` when prioritization or scope review is needed.
+- Use `docs-plan-changelog` to prepare evidence-backed `CHANGELOG.md` instructions.
+- Use `docs-plan-roadmap` to prepare confirmed `ROADMAP.md` instructions.
+- Use `docs-impl-maintainer` directly only when the update source is already approved and the file targets are clear.
+- Keep `docs-impl-maintainer` as the only agent that applies project-record edits.
 - Keep roadmap entries forward-looking and confirmed. Keep changelog entries limited to completed, evidence-backed changes.
 
 ## Prompt examples
 
 ### Orchestrator entry point
-Use `docs-maintenance-orchestrator` as the default entry point for workspace-wide reviews.
+Use `docs-orch-maintenance` or the `Start Docs Maintenance Workflow` prompt as the default entry point for workspace-wide reviews.
 
 Example prompts:
 - `PullLog workspace 全体の文書監査を開始してください。今回は監査のみで、編集はしないでください。`
@@ -87,7 +89,7 @@ Example prompts:
 - `文書監査の結果を整理し、承認後に maintainer へ渡す編集指示まで作ってください。`
 
 ### Focused governance audit
-Use `docs-governance-auditor` directly when you want a focused cross-subproject audit without orchestration overhead.
+Use `docs-audit-governance` directly only when you intentionally want a focused cross-subproject audit without orchestration overhead.
 
 Example prompts:
 - `workspace / subproject 用語の統一状況と正本参照の抜けを監査してください。編集はまだ不要です。`
@@ -95,7 +97,7 @@ Example prompts:
 - `README、AGENTS、docs の索引にドリフトがないか確認してください。`
 
 ### Public documentation safety review
-Use `public-docs-sanitizer` directly when the concern is publication safety within `pulllog-docs/`.
+Use `docs-audit-public` directly only when the concern is publication safety within `pulllog-docs/`.
 
 Example prompts:
 - `pulllog-docs の公開文書に内部情報や公開不適切な表現がないか確認してください。`
@@ -103,7 +105,7 @@ Example prompts:
 - `public docs が他 subproject の技術正本を不適切に上書きしていないか確認してください。`
 
 ### Approved maintenance execution
-Use `docs-maintainer` when the approved change set is already clear and you want the edits and evidence retention to be executed.
+Use `docs-impl-maintainer` only when the approved change set is already clear and you want the edits and evidence retention to be executed.
 
 Example prompts:
 - `承認済みの README と document-governance の修正を適用し、証跡も残してください。`
@@ -158,9 +160,9 @@ Requirements:
 
 ## Expected operator behavior
 
-As a rule, instructing `docs-maintenance-orchestrator` to start a documentation audit is enough for a normal workspace-wide review. The orchestrator should choose the relevant specialist agents, gather their findings, and return a consolidated report. Use the specialist agents directly only when you want to narrow the scope yourself.
+As a rule, instructing `docs-orch-maintenance` to start a documentation audit is enough for a normal workspace-wide review. The orchestrator should choose the relevant specialist agents, gather their findings, and return a consolidated report. Use the specialist agents directly only when you want to narrow the scope yourself.
 
-When edits are approved, the orchestrator should hand the work to `docs-maintainer` instead of editing directly. This keeps audit, approval, execution, and evidence retention separate.
+When edits are approved, the orchestrator should hand the work to `docs-impl-maintainer` instead of editing directly. This keeps audit, approval, execution, and evidence retention separate.
 
 ## Source-of-truth rules
 
@@ -180,7 +182,6 @@ When edits are approved, the orchestrator should hand the work to `docs-maintain
 ## Recommended usage
 
 - Use the orchestrator for workspace-wide reviews.
-- Use the governance auditor directly for focused drift checks.
-- Use the sanitizer directly for publication-readiness reviews.
-- Use the changelog planner and roadmap planner for records-maintenance instructions.
+- Use specialist agents directly only for intentionally focused follow-up.
+- Use the planner agents for records-maintenance instructions.
 - Use the maintainer for approved edits, evidence retention, and confirmed changelog or roadmap upkeep.

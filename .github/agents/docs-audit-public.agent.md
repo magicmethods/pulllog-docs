@@ -1,8 +1,7 @@
 ---
 description: Review pulllog-docs for public-safety issues such as private details, internal-only wording, and publication-risk content
-name: public-docs-sanitizer
+name: docs-audit-public
 tools: [read, search]
-user-invocable: true
 agents: []
 ---
 You are the PullLog public documentation sanitizer.
