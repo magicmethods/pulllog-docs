@@ -32,51 +32,19 @@ It is built with Nuxt.js 3 (SSR) and integrates with the backend API through a s
 
 ---
 
-## Design & Development Principles
+## Architecture Summary
 
-### State Management and Responsibility Separation
-- Pinia stores are **scoped by responsibility**:
-  - `useUserStore`: user authentication and profile
-  - `useAppStore`: application metadata
-  - `useLogStore`: gacha log retrieval and caching
-  - `useStatsStore`: statistical data management
-  - `useOptionStore`: user preferences and options
-  - `useCsrfStore`: CSRF token handling
-  - `useLoaderStore`: global loading state
-  - `useCurrencyStore`: currency data management
-  - `globalStore`: temporary global values
-- Caching is strictly limited. No caching of empty arrays or failed responses.
+- The frontend uses **Nuxt 3 SSR** and is hosted on **Cloudflare Workers**.
+- Browser-originated API traffic is mediated by the **Nuxt (Nitro) API proxy**.
+- Type-safe application code, internationalization, validation, and chart rendering are handled inside the frontend subproject.
 
-### Type Safety and Coding Rules
-- All code is written in TypeScript.  
-- `any` and non-null assertions (`!`) are disallowed in principle.  
-- Indentation: **4 spaces**  
-- Semicolons: **not required**  
-- Types are centralized in `types/` and documented with JSDoc (TypeDoc compatible).
+Detailed implementation choices such as store boundaries, type placement, middleware behavior, runtimeConfig usage, and proxy routing are maintained as canonical technical documentation in the frontend subproject.
 
-### Date and Internationalization
-- Dates are handled strictly as ISO8601 strings or `Date` objects with Luxon.  
-- i18n manages locale files, and UI text is referenced exclusively via `t()`.
+## Canonical Implementation References
 
-### Charts
-- Chart.js is wrapped in a common component layer.  
-- Real-time updates are supported during theme switching.
-
-### Validation
-- PrimeVue’s Form component is not used.  
-- Validation is implemented exclusively with Zod.
-
-### Styling
-- Base styling with TailwindCSS, detailed overrides with SCSS.  
-- Avoid in-component scoped styles. Styling is centralized or handled via PassThrough API.
-
----
-
-## Deployment & Hosting
-
-- The frontend uses **SSR (Server-Side Rendering)** and is hosted on **Cloudflare Workers**.  
-- All API requests are routed through the **Nuxt (Nitro) API proxy**, which attaches secrets and forwards to the backend Laravel API.  
-- Environment-specific API endpoints are configured via `.env` and `runtimeConfig`.
+- Frontend architecture and implementation overview: `frontend/docs/architecture/overview.md`
+- Frontend build and deployment procedure: `frontend/docs/operations/deploy-and-build.md`
+- API contract source of truth: `contract/api-schema.yaml`
 
 ---
 
@@ -106,8 +74,8 @@ The frontend repository also maintains a **manifest-driven Playwright E2E archit
 ## Related Links
 
 - [PullLog Backend Documentation](./backend.md)
-- [PullLog API Specification](./api_overview.md)
-- [Terms of Service](../public/docs/terms_en.md)  
-- [Privacy Policy](../public/docs/privacy_policy_en.md)
+- [PullLog API Specification](./api-overview.md)
+- [Terms of Service](../public/terms.md)  
+- [Privacy Policy](../public/privacy.md)
 
 ---

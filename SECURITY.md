@@ -6,7 +6,7 @@ The production service (https://pulllog.net) operates separately.
 
 ### In Scope
 - Documentation in this repo (incorrect descriptions, misleading diagrams)
-- Public API specs under `docs/api/`
+- Public API overview in `docs/api-overview.md`
 - Security concerns in the documentation site or repo configuration
 
 ### Out of Scope

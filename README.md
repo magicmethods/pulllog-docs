@@ -3,6 +3,10 @@
 > This repository hosts **public technical documentation** for PullLog.  
 > **Source code is private**. Issues & discussions are welcome here.
 
+> Japanese version: [README-ja.md](README-ja.md)
+
+> Terminology policy: PullLog as a whole is called the workspace, and each top-level directory such as `frontend/`, `backend/`, `contract/`, and `pulllog-docs/` is called a subproject. The canonical definition is documented in `docs/workspace-terminology.md`. When referring to VS Code or pnpm features, use their official terminology.
+
 ## What is PullLog
 PullLog is a web application that **records and analyzes gacha histories** (draw counts, rare drop rates, spending) across multiple titles.
 
@@ -19,11 +23,13 @@ PullLog is a web application that **records and analyzes gacha histories** (draw
 | Application Management | History Management  | Stats Viewer |
 
 ## Documentation Map
-- Architecture: [`docs/architecture.md`](docs/architecture.md)
-- Frontend: [`docs/frontend.md`](docs/frontend.md) / [(Japanese ver.)](docs/frontend_ja.md)
-- Backend: [`docs/backend.md`](docs/backend.md) / [(Japanese ver.)](docs/backend_ja.md)
-- API Overview: [`docs/api_overview.md`](docs/api_overview.md)
-- Operations (public info only): [`docs/ops.md`](docs/ops.md)
+- Workspace terminology: [`docs/workspace-terminology.md`](docs/workspace-terminology.md) / [(Japanese ver.)](docs/workspace-terminology-ja.md)
+- Document governance: [`docs/document-governance.md`](docs/document-governance.md) / [(Japanese ver.)](docs/document-governance-ja.md)
+- Architecture: [`docs/architecture.md`](docs/architecture.md) / [(Japanese ver.)](docs/architecture-ja.md)
+- Frontend: [`docs/frontend.md`](docs/frontend.md) / [(Japanese ver.)](docs/frontend-ja.md)
+- Backend: [`docs/backend.md`](docs/backend.md) / [(Japanese ver.)](docs/backend-ja.md)
+- API Overview: [`docs/api-overview.md`](docs/api-overview.md) / [(Japanese ver.)](docs/api-overview-ja.md)
+- Operations (public info only): [`docs/ops.md`](docs/ops.md) / [(Japanese ver.)](docs/ops-ja.md)
 - Terms & Privacy (public ver.): [`public/terms.md`](public/terms.md), [`public/privacy.md`](public/privacy.md)
 - Roadmap: [`ROADMAP.md`](ROADMAP.md)
 - Changelog (docs-only): [`CHANGELOG.md`](CHANGELOG.md)

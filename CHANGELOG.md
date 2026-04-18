@@ -14,9 +14,12 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) an
 - Public roadmap (`ROADMAP.md`)
 - Issue templates for bug reports & feature requests (with security disclaimer)
 - Public-facing E2E architecture notes covering the manifest-driven Playwright approach, the standard PC / tablet / smartphone device matrix, and the aggregated Markdown / PDF reporting model
+- Documented `docs-maintainer` as the approved execution role and introduced read-only planners for evidence-backed `CHANGELOG.md` and `ROADMAP.md` preparation
+- Standardized YAML front matter metadata requirements for reviewable audit and maintenance records under `.github/audit-reports/`
 
 ### Changed
 - Updated public frontend and architecture documentation to describe template-based E2E reporting and PullLog-branded evidence output at a high level
+- Updated the documentation governance and orchestrator workflow so planning remains separate from execution and approved project-record edits route through `docs-maintainer`
 
 ### Fixed
 - N/A

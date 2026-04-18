@@ -3,11 +3,22 @@
 本ドキュメントは `pulllog-docs/`（公開ドキュメント）向けの作業ガイドです。
 このワークスペースは主に Markdown 資産を扱います。
 
+## Terminology Policy
+- PullLog 全体は `workspace`、`frontend/` `backend/` `contract/` `pulllog-docs/` など各トップレベルディレクトリは `subproject` と呼ぶ。
+- 正式な定義は `docs/workspace-terminology.md` を参照する。
+- VS Code 機能や pnpm の説明では、それぞれの公式用語を優先する。
+
 ## Project Structure
 - `docs/`: 技術ドキュメント本文（architecture / frontend / backend / ops / api overview）
 - `public/`: 公開ポリシー文書や画像・動画アセット
 - `README.md`, `ROADMAP.md`, `CHANGELOG.md`, `SECURITY.md`: ルート文書
+- `.github/agents/`: 文書監査と運用保守のカスタムエージェント定義
 - `.github/ISSUE_TEMPLATE/`: Issue テンプレート
+
+## Documentation Governance
+- PullLog 全体の文書ガバナンス正本は `docs/document-governance.md` を参照する。
+- `pulllog-docs/` は共有用語、公開ドキュメント方針、横断文書監査ワークフローを管理する。
+- 各 subproject の技術的な正本は各 subproject 側に残し、`pulllog-docs/` が勝手に上書きしない。
 
 ## Editing Policy
 - 変更はユーザー依頼範囲に限定する。

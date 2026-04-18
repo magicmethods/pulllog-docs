@@ -26,6 +26,7 @@ This repository primarily contains public documentation assets.
 - Do not publish secrets, internal endpoints, credentials, or private architecture details.
 - Keep image/video references relative and valid.
 - Prefer small factual fixes over broad rewrites unless explicitly requested.
+- For PullLog-wide documentation governance or audit work, consult `docs/document-governance.md` and the custom agents under `.github/agents/` when they exist.
 
 ## Review & Validation Rules
 
