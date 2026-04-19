@@ -85,9 +85,15 @@ Preferred group tokens:
 
 ### backend
 
-No custom agent workflow is defined yet.
+#### Feature workflow
 
-When backend-specific agents are added, follow the same naming rule and add a single orchestrator entrypoint before exposing specialist roles.
+| Role | Agent | Normal entry? | Prompt |
+|---|---|---|---|
+| Orchestrator | backend-orch-feature | Yes | Start Backend Feature Workflow |
+| Architecture | backend-arch-api | No | - |
+| Contract alignment | backend-design-contract | No | - |
+| Implementation | backend-impl-feature | No | - |
+| Review | backend-review-feature | No | - |
 
 ## Maintenance rule
 
